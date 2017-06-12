@@ -43,11 +43,11 @@ group :development, :test do
   gem 'spring'
 
   # Use rspec for tests
-  gem 'rspec-rails', '~> 3.5'
+  gem "rspec-rails", "~> 3.2.1"
 end
 
 group :test do
   # Use capybara for integration testing
-  gem 'capybara'
+  gem "capybara", "~> 2.4"
 end
 
