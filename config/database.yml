@@ -8,12 +8,12 @@ default: &default
 
 development:
   <<: *default
-  database: <%=ENV['DB_DEV_NAME']%>
+  database: ticketee2_dev
 
 test:
   <<: *default
-  database: <%=ENV['DB_TEST_NAME']%>
+  database: ticketee2_test
 
 production:
   <<: *default
-  database: <%=ENV['DB_PROD_NAME']%>
+  database: ticketee2_prod
