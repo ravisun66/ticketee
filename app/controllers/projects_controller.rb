@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
+  before_action :find_project, only: [:show, :edit, :update]
+  before_action :load_projects, only: :index
   def index
-    @projects = Project.all
   end
   def new
     @project = Project.new
@@ -17,13 +18,12 @@ class ProjectsController < ApplicationController
     end
   end
   def show
-    @project = Project.find(params[:id])
+
   end
   def edit
-    @project = Project.find(params[:id])
+    
   end
   def update
-    @project = Project.find(params[:id])
 
     if @project.update(project_params)
       flash[:notice] = "Project has been updated."
@@ -37,6 +37,12 @@ class ProjectsController < ApplicationController
 
   private
 
+  def find_project
+    @project = Project.find(params[:id])
+  end
+  def load_projects
+    @projects = Project.all
+  end
   def project_params
     params.require(:project).permit(:name,:description)
   end
