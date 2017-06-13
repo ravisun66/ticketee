@@ -46,6 +46,8 @@ end
 group :test do
   # Use capybara for integration testing
   gem "capybara", "~> 2.4"
+  # Use Factory girl for seting test data
+  gem "factory_girl_rails", "~> 4.5"
 end
 
 group :development do 
