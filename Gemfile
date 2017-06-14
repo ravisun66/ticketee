@@ -54,3 +54,7 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 end
+# Use bootstrap-saas for styling
+gem 'bootstrap-sass', '~> 3.3.6'
+# Use fontawesome for icons
+gem 'font-awesome-rails', '~> 4.7.0' 
