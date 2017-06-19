@@ -3,19 +3,48 @@
 @import "font-awesome";
 
 .page-header {
-          position: relative;
-          padding-bottom: 0px;
-          &:first-child {
-            margin-top: 20px;
+  position: relative;
+  padding-bottom: 0px;
+  
+  &:first-child {
+    margin-top: 20px;
+  }
+  ul.actions {
+    @extend .list-unstyled;
+    @extend .list-inline;
+    position: absolute;
+    bottom: -2px;
+    right: 2px;
+    max-width: 25%;
+    text-align: right; 
+  }
 }
-        ul.actions {
-          @extend .list-unstyled;
-          @extend .list-inline;
-          position: absolute;
-          bottom: -2px;
+a.new, a.edit, a.delete {
+  @extend .btn;
 
-  right: 2px;
-  max-width: 25%;
-  text-align: right; 
+  &:before {
+    font-family: "FontAwesome";
+    padding-right: .5em;
+  }
 }
+a.new {
+  @extend .btn-success;
+
+  &:before {
+    @extend .fa-plus;
+  }
+}
+a.edit {
+  @extend .btn-primary;
+
+  &:before {
+    @extend .fa-pencil;
+  }
+}
+a.delete {
+  @extend .btn-danger;
+
+  &:before {
+    @extend .fa-trash;
+  }
 }
