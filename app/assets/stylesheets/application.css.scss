@@ -48,3 +48,12 @@ a.delete {
     @extend .fa-trash;
   }
 }
+header {
+  @extend .page-header;
+  position: relative;
+  padding-bottom: 0px;
+  
+  &:first-child {
+    margin-top: 20px;
+  } 
+}
