@@ -58,3 +58,5 @@ end
 gem 'bootstrap-sass', '~> 3.3.6'
 # Use fontawesome for icons
 gem 'font-awesome-rails', '~> 4.7.0' 
+# Use SimpleForm for forms
+gem 'simple_form'

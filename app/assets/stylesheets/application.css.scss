@@ -1,6 +1,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "projects";
+@import "responsive";
 
 .page-header {
   position: relative;
@@ -12,11 +14,6 @@
   ul.actions {
     @extend .list-unstyled;
     @extend .list-inline;
-    position: absolute;
-    bottom: -2px;
-    right: 2px;
-    max-width: 25%;
-    text-align: right; 
   }
 }
 a.new, a.edit, a.delete {
@@ -56,4 +53,16 @@ header {
   &:first-child {
     margin-top: 20px;
   } 
+}
+.alert-alert {
+  @extend .alert-danger;
+}
+.alert-notice {
+  @extend .alert-success;
+}
+form {
+  max-width: 500px;
+}
+body {
+  padding-top: 70px;
 }
